@@ -1,0 +1,5 @@
+if [[ $(`gitleaks --repo-url=https://github.com/my-insecure/repo -v`) ]]
+then
+  exit 0
+fi
+exit 1

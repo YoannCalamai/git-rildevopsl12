@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
+valid_chars="CESI-[0-9]+"
+
+if [[ ! $BRANCH_NAME =~ $valid_chars ]]
+then
+    printf '%s\n' "Your name branch must match with this regex CESI-[0-9]+"
+    exit 1
+fi
+
+echo "[$BRANCH_NAME] $(cat $1)" > $1
+exit 0
