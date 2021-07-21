@@ -1,0 +1,5 @@
+PROUT=$(git rev-parse --abbrev-ref HEAD)
+echo $PROUT
+if [[ $PROUT == *"CESI-123456"* ]]; then
+  COMMIT_MSG_FILE+="CESI-123456:"
+fi
