@@ -1,6 +1,6 @@
-#Rendu Flavien CHAGRAS
+# Rendu Flavien CHAGRAS
 
-##1.2 Compte Github
+## 1.2 Compte Github
 ```bash
 git config --global user.name "Flavien Chagras"
 git config --global user.email "flavien.chagras@viacesi.fr"
@@ -15,7 +15,7 @@ Mon fichier .gitconfig
         ui = auto
 ```
 
-##1.3 Premier Dépôt
+## 1.3 Premier Dépôt
 ```bash
 git clone git@github.com:Flachag/gitexercices.git
 git add README.md
@@ -23,7 +23,7 @@ git commit -m "Ajout du README"
 git push
 ```
 
-##1.4 Ignorer des fichiers
+## 1.4 Ignorer des fichiers
 ```bash
 git add .gitignore
 git commit -m "Ajout du gitignore"
@@ -68,7 +68,7 @@ hs_err_pid*
 # End of https://www.toptal.com/developers/gitignore/api/java
 ```
 
-##1.5 Embranchement avec le git-flow : nouvelle fonctionnalité
+## 1.5 Embranchement avec le git-flow : nouvelle fonctionnalité
 ```bash
 git checkout -b dev master
 git push --set-upstream origin dev
@@ -87,7 +87,7 @@ git merge notificationParEmail
 git push origin --delete notificationParEmail
 ```
 
-##1.6 Embranchement avec le git-flow : release
+## 1.6 Embranchement avec le git-flow : release
 ```bash
 git checkout -b RealeaseCandidate1.2 dev
 git add notification.txt
@@ -104,7 +104,7 @@ git merge RealeaseCandidate1.2
 git push origin --delete RealeaseCandidate1.2
 ```
 
-##1.7 Crochets
+## 1.7 Crochets
 prepare-commit-msg avec le CESI-[0-9]+
 ```bash
 #!/bin/bash
