@@ -152,11 +152,17 @@ exit 0
 
 pre-commit
 ```bash
-if [[ $(`java -jar lib/google-java-format-1.10-all-deps.jar –replace src/*.java`) && $(`java -jar lib/spotbugs-4.3.0/lib/spotbugs.jar -textui src/*.class`) ]]
+if [[ ! $(`java -jar lib/google-java-format-1.10-all-deps.jar –replace src/*.java`) ]]
 then
-  exit 0
+  exit 1
 fi
-exit 1
+
+if [[ ! $(`java -jar lib/spotbugs-4.3.0/lib/spotbugs.jar -textui src/*.class`) ]]
+then
+  exit 1
+fi
+
+exit 0
 ```
 
 git leaks (dans pre-push)
