@@ -1,0 +1,23 @@
+# Compiled class file # Permet d'ignorer les fichiers .class lors d'actions de push/pull
+.class
+
+# Log file # Permet d'ignorer les fichiers .log lors d'actions de push/pull
+.log
+
+# BlueJ files # Permet d'ignorer les fichiers .ctxt lors d'actions de push/pull
+.ctxt
+
+# Mobile Tools for Java (J2ME) # Permet d'ignorer les fichiers temporaires .mtj lors d'actions de push/pull
+.mtj.tmp
+
+# Package Files # Permet d'ignorer les différents fichiers de package, par extension, lors d'actions de push/pull
+.jar
+.war
+.nar
+.ear
+.zip
+.tar.gz
+.rar
+
+# virtual machine crash logs, see httpwww.java.comendownloadhelperror_hotspot.xml # Permet d'ignorer les fichiers commençant par hs_err_pid ( ex : hs_err_pid.log, généré lors d'erreurs java ) lors d'actions de push/pull
+hs_err_pid*

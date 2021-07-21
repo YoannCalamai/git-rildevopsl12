@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Dans ce pre-push, nous prenons en compte que GitLeaks à été installé et configuré par l'utilisateur sur un environnement linux
+# Ce pre-push previent toute tentative de push sur la branche master|main, même après une demande de confirmation par l'utilisateur
+# Mais également bloque tout push en cas d'exit code gitleaks égal à 1	
+
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+push_command=$(ps -ocommand= -p $PPID)
+cmdGitleaks="/usr/local/bin/gitleaks --unstaged --verbose --leaks-exit-code=1 --config-path=$HOME/.git-support/gitleaks.toml"
+
+do_exit(){
+	echo -e $policy
+	exit 1
+}
+
+if [[ $push_command =~ 'master' ]] || [ $current_branch = 'master' ] || [[ $push_command =~ 'main' ]] || [ $current_branch = 'main' ]; then
+    echo -en "\033[31m[ATTENTION]\033[0m Voulez-vous vraiment push vos modifications sur la branche master|main ? [y|n]"
+    read -n 1 -r < /dev/tty
+    if echo $REPLY | grep -E '^[Yy]$' > /dev/null
+	then
+		policy="\n\n[Erreur] Les sécurités de ce projet ne vous permettent pas de push directement vers la branch master|main ! Contactez le maintainer du projet. \n\n"
+		do_exit
+	fi
+fi
+
+
+$cmd
+status=$?
+
+if [ $status -eq 1 ]; then
+	policy="[Erreur] Le module gitleaks a detecté des informations sensibles dans les modifications que vous voulez apporter à la branche master|main."
+	do_exit
+fi
+
+unset do_exit
+exit 0
