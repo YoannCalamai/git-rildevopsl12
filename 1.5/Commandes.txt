@@ -1,0 +1,37 @@
+C:\Users\Quentin\TpGit\gitexercises>git branch dev
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\Quentin\TpGit\gitexercises>git branch notificationParEmail
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout notificationParEmail
+Switched to branch 'notificationParEmail'
+
+C:\Users\Quentin\TpGit\gitexercises>echo "du texte a ce fichier pour simuler du code" >> notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch notificationParEmail
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git add notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git commit -m "ajout notification"
+[notificationParEmail f1612f1] ajout notification
+ 1 file changed, 1 insertion(+)
+ create mode 100644 notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\Quentin\TpGit\gitexercises>git merge notificationParEmail
+Updating b7f34e6..f1612f1
+Fast-forward
+ notification.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git branch -d notificationParEmail
+Deleted branch notificationParEmail (was f1612f1).
