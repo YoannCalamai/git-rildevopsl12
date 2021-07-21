@@ -1,0 +1,21 @@
+Création de branches:
+- git checkout -b RealeaseCandidate1.2          // Fait sur la branche main - permet de créer la branche dev basée sur main
+
+Push des modification sur notificationParEmail:
+- git add .                                     // Ajout des fichiers pour le commit
+- git commit -m "Correction de l'affichage"     // Réalisation du commit
+- git push                                      // Envoi vers le dépot distant
+
+Merge de RealeaseCandidate1.2 sur main:
+- git checkout main                             // Permet de se rendre sur main
+- git merge RealeaseCandidate1.2                // Permet de merge la branche RealeaseCandidate1.2 sur main
+- git tag 1.2                                   // Permet de tagger le commit
+- git push
+
+- git checkout dev                              // Permet de se rendre sur dev
+- git merge RealeaseCandidate1.2                // Permet de merge la branche RealeaseCandidate1.2 sur dev
+
+- git branch -d RealeaseCandidate1.2            // Permet de suprimer la branche notificationParEmail local
+- git push origin --delete RealeaseCandidate1.2 // Permet de suprimer la branche notificationParEmail distante
+
+lien du dépot: https://github.com/JulienKEIFF/gitexercices

@@ -1,0 +1,6 @@
+Commandes utilisée:
+- git add .                             // Ajout des fichiers pour le commit
+- git commit -m "First commit"          // Réalisation du commit
+- git push                              // Envoi vers le dépot distant
+
+lien du dépot: https://github.com/JulienKEIFF/gitexercices

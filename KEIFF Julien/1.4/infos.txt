@@ -1,0 +1,14 @@
+contenue du gitignore:
+
+*.class         // Tout les fichiers compilée
+*.log           // Tout les fichiers de logs
+
+*.jar           // Tout les fichiers de packages
+*.war           // Tout les fichiers de packages
+*.nar           // Tout les fichiers de packages
+*.ear           // Tout les fichiers de packages
+*.zip           // Tout les fichiers de packages
+*.tar.gz        // Tout les fichiers de packages
+*.rar           // Tout les fichiers de packages
+
+Le gitignore est disponible sur le dépot distant
