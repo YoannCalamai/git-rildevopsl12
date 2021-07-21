@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Dans ce pre-push, nous prenons en compte que GitLeaks à été installé et configuré par l'utilisateur sur un environnement linux
+
+do_exit(){
+    echo -e $policy
+    exit 1
+}
+
+cmdGitleaks="/usr/local/bin/gitleaks --unstaged --verbose --leaks-exit-code=1 --config-path=$HOME/.git-support/gitleaks.toml"
+
+$cmd
+status=$?
+
+if [ $status -eq 1 ]; then
+    policy="[Erreur] Le module gitleaks a detecté des informations sensibles dans les modifications que vous voulez apporter à la branche master|main."
+    do_exit
+fi
+
+unset do_exit
+exit 0

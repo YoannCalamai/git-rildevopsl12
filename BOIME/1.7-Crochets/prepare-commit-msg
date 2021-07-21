@@ -1,0 +1,14 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+
+echo -en "Merci de fournir un numéro d'incident : "
+exec < /dev/tty && read -p "" INCIDENT_TICKET
+if [ INCIDENT_TICKET != "" ]
+then
+    printf "| ${INCIDENT_TICKET}"  >> $COMMIT_MSG_FILE
+
+    exit 0 # push done
+else
+    exit 1 # push not done
+fi
