@@ -1,0 +1,6 @@
+#!/bin/bash
+BRANCHE=$(git rev-parse --abbrev-ref HEAD)
+echo $BRANCHE
+if [[ $BRANCHE == *"CESI-123456"* ]]; then
+  echo $COMMIT_MSG_FILE << "$BRANCHE"
+fi

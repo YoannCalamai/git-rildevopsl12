@@ -1,0 +1,15 @@
+1.6
+
+git checkout -b RealeaseCandidate1.2 dev
+git add notification.txt
+git commit -m ":bug: Fix notification"
+git push --set-upstream origin RealeaseCandidate1.2
+git checkout master
+git merge RealeaseCandidate1.2
+git tag -a v1.2 -m "RealeaseCandidate1.2"
+git push --tags
+
+git checkout dev
+git merge RealeaseCandidate1.2
+git push origin --delete RealeaseCandidate1.2
+git push
