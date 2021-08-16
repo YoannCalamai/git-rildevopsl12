@@ -1,0 +1,14 @@
+1.5
+
+❯ git checkout -b dev master
+❯ git push --set-upstream origin dev
+
+❯ git checkout -b notificationParEmail dev
+❯ echo "Ici du code" >> notification.txt
+❯ git add notification.txt
+❯ git commit -m ":beers: Ajout du fichier Notification"
+❯ git push --set-upstream origin notificationParEmail
+
+❯ git checkout dev
+❯ git merge notificationParEmail
+❯ git push origin --delete notificationParEmail
