@@ -1,0 +1,99 @@
+C:\Users\Quentin\TpGit\gitexercises>git branch RealeaseCandidate1.2
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout RealeaseCandidate1.2
+Switched to branch 'RealeaseCandidate1.2'
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch RealeaseCandidate1.2
+nothing to commit, working tree clean
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch RealeaseCandidate1.2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notification.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Quentin\TpGit\gitexercises>git diff notification.txt
+diff --git a/notification.txt b/notification.txt
+index 77ec20f..5d0d7ee 100644
+--- a/notification.txt
++++ b/notification.txt
+@@ -1 +1,2 @@
+ "du texte a ce fichier pour simuler du code"
++correction de bug
+\ No newline at end of file
+
+C:\Users\Quentin\TpGit\gitexercises>git commit -m "correction de bug"
+On branch RealeaseCandidate1.2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notification.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Quentin\TpGit\gitexercises>git add notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git commit -m "correction de bug"
+[RealeaseCandidate1.2 d3ce6df] correction de bug
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch RealeaseCandidate1.2
+nothing to commit, working tree clean
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\Quentin\TpGit\gitexercises>git merge RealeaseCandidate1.2
+Updating f1612f1..d3ce6df
+Fast-forward
+ notification.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\Quentin\TpGit\gitexercises>git merge dev
+Updating b7f34e6..d3ce6df
+Fast-forward
+ notification.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 notification.txt
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Quentin\TpGit\gitexercises>git tag "1.2"
+
+C:\Users\Quentin\TpGit\gitexercises>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\Quentin\TpGit\gitexercises>git merge master
+Already up to date.
+
+C:\Users\Quentin\TpGit\gitexercises>git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\Quentin\TpGit\gitexercises>git tag
+1.2
+
+C:\Users\Quentin\TpGit\gitexercises>git branch -d RealeaseCandidate1.2
+Deleted branch RealeaseCandidate1.2 (was d3ce6df).
