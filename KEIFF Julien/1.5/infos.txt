@@ -1,0 +1,16 @@
+Création de branches:
+- git checkout -b dev                           // Fait sur la branche main - permet de créer la branche dev basée sur main
+- git checkout -b notificationParEmail          // Fait sur la brache dev - permet de créer la branche notificationParEmail basée sur dev
+
+Push des modification sur notificationParEmail:
+- git add .                                     // Ajout des fichiers pour le commit
+- git commit -m "Ajout du système de notif"     // Réalisation du commit
+- git push                                      // Envoi vers le dépot distant
+
+Merge de notificationParEmail sur dev:
+- git checkout dev                              // Permet de se rendre sur dev
+- git merge notificationParEmail                // Permet de merge la branche notificationParEmail sur dev
+- git branch -d notificationParEmail            // Permet de suprimer la branche notificationParEmail local
+- git push origin --delete notificationParEmail // Permet de suprimer la branche notificationParEmail distante
+
+lien du dépot: https://github.com/JulienKEIFF/gitexercices
