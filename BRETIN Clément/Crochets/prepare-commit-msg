@@ -1,0 +1,16 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+echo -en "\033[31m Merci de fournir un numéro d'incident :  \033[0m"
+exec < /dev/tty && read -p "CESI-" TICKET
+if [ TICKET != "" ]
+then
+    TICKET_NUM=CESI-${TICKET}
+    printf $TICKET_NUM $COMMIT_MSG_FILE
+    exit 0
+else
+    exit 1
+fi
