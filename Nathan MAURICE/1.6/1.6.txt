@@ -1,0 +1,13 @@
+
+1.6
+git checkout -b RealeaseCandidate1.2 dev
+git add notification.txt
+git commit -m "Ajout de modif sur le txt notification."
+git push --set-upstream origin RealeaseCandidate1.2
+git checkout main
+git merge RealeaseCandidate1.2
+git tag -a v1.2 -m "RealeaseCandidate1.2"
+
+git checkout dev
+git merge RealeaseCandidate1.2
+git push origin --delete RealeaseCandidate1.2

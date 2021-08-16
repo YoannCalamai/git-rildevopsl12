@@ -1,0 +1,16 @@
+1.5
+git checkout -b dev main
+git push --set-upstream origin dev
+
+git checkout -b notificationParEmail dev
+git add notification.txt
+git commit -m "Ajout du txt Notification."
+git push --set-upstream origin notificationParEmail
+
+git add notification.txt
+git commit -m "Modif de notif."
+git push
+
+git checkout dev
+git merge notificationParEmail
+git push origin --delete notificationParEmail

@@ -1,0 +1,10 @@
+Commande utilisé pour la partie 3:
+URL : https://github.com/Maurice88u/gitexercices.git
+
+git clone 
+cd gitexercices/
+nano README.md
+git status 
+git add *
+git commit -m "ajout du readme"
+git push 
