@@ -1,0 +1,13 @@
+git branch dev
+git push origin dev
+git checkout dev 
+git branch notificationParEmail
+git checkout notificationParEmail
+touch notification 
+nano notification 
+git commit -m "Add Notification fonctionnalite"
+git checkout dev 
+git merge notificationParEmail
+git push origin dev
+git branch remove notificationParEmail ( // inutile)
+git push origin --delete notificationParEmail

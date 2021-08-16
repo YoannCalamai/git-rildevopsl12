@@ -1,0 +1,23 @@
+
+Le gitignore sert à ignorer une partie des fichiers/arborescence.
+
+L'ensemble a été généré sur gitignore.io
+Les conventions autour du gitignore sont d'enlevés les fichiers temporaires, compilés, packagés etc. pour 
+garder un repo propre et ne pas polluer les commits et divulger des informations inutiles.
+
+Les .class fichiers résultants de la compilation donc non
+Les .log peuvent survenir de plusieurs façons mais dépendent de l'utilisation, non pertinent et 
+surtout pollution des commits. Voir un bugtracker pour ce genre de choses.
+
+.ctxt fichier de configuration d'environnement BlueJ, spécifique mais généralement les configurations
+utilisateurs vont variés d'un utilisateur à l'autre et donc il ne faut pas les mettre dans un git sauf rares 
+cas si conventions de repertoires, avec vscode. cpp_properties, tasks, si l'on est carré.
+
+.mtk .tmp fichiers temporaires 
+
+L'ensemble des fichiers packagés : ça dépend des gens. C'est plutôt pratique par moment de garder le zip original
+de par exemple une librairie. Mais ici non, soit, c'est assez rare de toute manière.
+
+hs_err_pid* Crash Log, même topo que les .log. 
+
+ 

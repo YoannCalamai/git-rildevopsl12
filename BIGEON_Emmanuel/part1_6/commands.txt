@@ -1,0 +1,10 @@
+git checkout dev
+git branch ReleaseCandidate1.2 
+nano notification
+git add notification
+git commit -m "Modification notification"
+git checkout master 
+git merge releaseCandidate1.2 
+git tag 1.2
+git push origin 1.2
+git push origin --delete releaseCandidate1.2 

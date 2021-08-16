@@ -1,0 +1,8 @@
+URL DEPOT DISTANT : https://github.com/EmmanuelBIGEON/gitexercices
+
+git clone git@github.com:EmmanuelBIGEON/gitexercices.git
+touch README.txt
+nano README.txt 
+git add README.txt 
+git commit -m "Ajout du README"
+git push 
