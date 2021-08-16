@@ -1,0 +1,23 @@
+— Sur votre dépôt gitexercices
+
+— Créez une branche RealeaseCandidate1.2 basée sur dev.
+git checkout develop
+git checkout -b RealeaseCandidate1.2
+
+— Modifiez le fichier notification pour simuler une correction de bug
+
+— Fusionnez RealeaseCandidate1.2 avec master
+git add notification.txt
+git commit -m "Edit notification"
+git checkout master
+git merge RealeaseCandidate1.2
+
+— Taggez le dernier commit de master en 1.2
+git tag 1.2
+
+— Fusionnez RealeaseCandidate1.2 avec dev
+git checkout develop
+git merge RealeaseCandidate1.2
+
+— Supprimez la branche RealeaseCandidate1.2
+git branch -d RealeaseCandidate1.2

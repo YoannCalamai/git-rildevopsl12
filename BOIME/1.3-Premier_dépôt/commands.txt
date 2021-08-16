@@ -1,0 +1,17 @@
+— Créez un dépôt vide nommé gitexercices
+
+— Clonez ce dépôt sur votre machine
+git clone https://github.com/benoitboime/gitexercices.git
+
+— Ajoutez un fichier texte vide nommé README
+
+— Ajoutez une jolie phrase à ce fichier
+
+— Commitez ce fichier
+git add README.md
+git commit -m "Add README"
+
+— Poussez votre commit sur votre dépôt distant (github)
+git push
+
+https://github.com/benoitboime/gitexercices.git

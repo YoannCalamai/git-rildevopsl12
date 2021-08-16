@@ -1,0 +1,22 @@
+— Sur votre dépôt gitexercices
+
+— Créez une branche dev (basée sur master)
+git checkout -b develop
+
+— Créez une branche notificationParEmail basée sur dev.
+git checkout -b notificationParEmail
+
+— Ajoutez un fichier texte notification
+
+— Ajoutez du texte à ce fichier pour simuler du code
+
+— Commitez ce fichier
+git add notification.txt
+git commit -m "Add notification"
+
+— Fusionnez cette fonctionnalité avec la branche dev
+git checkout develop
+git merge notificationParEmail
+
+— Supprimez la branche notificationParEmail
+git branch -d notificationParEmail
